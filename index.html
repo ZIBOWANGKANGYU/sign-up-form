@@ -6,7 +6,7 @@ html{
 }
 body{
     height: 100%;
-    width: 75%;
+    width: 80%;
     margin: auto
 }
 .overall_container{
@@ -16,10 +16,30 @@ body{
     background-repeat: no-repeat;
 }
 .form{
-    width: 75%;
+    width: 58%;
+    height: 100%;
     float: right;
     background-color: white;
 }
+header{
+    position: relative;
+    margin-top: 25%;
+    margin-left: 15%;
+    margin-right: 15%;   
+}
+.fields{
+    position: relative;
+    margin-left: 15%;
+    margin-right: 15%;   
+}
+.fieldset-title{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+input, label {
+    display:block;
+}
+
 </style>
 
 <html lang="en-US">
@@ -27,8 +47,50 @@ body{
         <div class="overall_container">
             <div class="form">
                 <header>
-                    This is not a real online service!
+                    <p>
+                        This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+                    </p>
+                    <p>
+                        You know you want to.
+                    </p>
                 </header>
+                <div class="fields">
+                    <p class="fieldset-title">
+                        Let's do this!
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="name">FIRST NAME</label>
+                                <input type="text" id="first_name" name="first_name" value="Thor">
+                            </td>
+                            <td>
+                                <label for="name">LAST NAME</label>
+                                <input type="text" id="last_name" name="last_name" value="Odinson">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">EMAIL</label>
+                                <input type="email" id="email" name="email">
+                            </td>
+                            <td>
+                                <label for="phone">PHONE NUMBER</label>
+                                <input type="number" id="phone" name="phone">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password">PASSWORD</label>
+                                <input type="password" id="password" name="password">
+                            </td>
+                            <td>
+                                <label for="confirm_password">CONFIRM PASSWORD</label>
+                                <input type="password" id="confirm_password" name="confirm_password">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </body>
