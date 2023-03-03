@@ -9,7 +9,8 @@ body{
     width: 80%;
     margin: auto
 }
-.overall_container{
+.overall-container{
+    position: relative;
     height: 100%;
     background-size: contain;
     background-image: url("data/background-image.jpg");
@@ -23,37 +24,62 @@ body{
 }
 header{
     position: relative;
-    margin-top: 25%;
-    margin-left: 15%;
-    margin-right: 15%;   
+    padding-top: 12vh;
+    padding-bottom: 8vh;
+    padding-left: 10vh;
+    padding-right: 5vh;   
+    font-size: 25px;
+    background-color: rgb(232, 232, 232);
 }
 .fields{
     position: relative;
-    margin-left: 15%;
-    margin-right: 15%;   
+    margin-top: 2vh;
+    margin-left: 10vh;
+    margin-right: 5vh;   
+}
+.action{
+    position: relative;
+    margin-top: 10vh;
+    margin-left: 10vh;
+    margin-right: 5vh;   
 }
 .fieldset-title{
     margin-top: 5%;
     margin-bottom: 5%;
+    font-size: 25px;
+}
+table{
+    border-spacing: 25px;
 }
 input, label {
     display:block;
 }
-
+button{
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+    padding-right: 2.5vh;
+    padding-left: 2.5vh;
+    font-size: 20px;
+    font-weight: 800;
+    background-color: rgb(99, 124, 99);
+    border-radius: 8px
+}
 </style>
 
 <html lang="en-US">
     <body>
-        <div class="overall_container">
+        <div class="overall-container">
             <div class="form">
-                <header>
-                    <p>
-                        This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
-                    </p>
-                    <p>
-                        You know you want to.
-                    </p>
-                </header>
+                <div class = "header-container">
+                    <header>
+                        <p>
+                            This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.
+                        </p>
+                        <p>
+                            You know you want to.
+                        </p>
+                    </header>
+                </div>
                 <div class="fields">
                     <p class="fieldset-title">
                         Let's do this!
@@ -61,35 +87,53 @@ input, label {
                     <table>
                         <tr>
                             <td>
-                                <label for="name">FIRST NAME</label>
-                                <input type="text" id="first_name" name="first_name" value="Thor">
+                                <div class = "input-cell">
+                                    <label for="name">FIRST NAME</label>
+                                    <input type="text" id="first_name" name="first_name" value="Thor">
+                                </div>
                             </td>
                             <td>
+                                <div class = "input-cell">
                                 <label for="name">LAST NAME</label>
                                 <input type="text" id="last_name" name="last_name" value="Odinson">
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
+                                <div class = "input-cell">
                                 <label for="email">EMAIL</label>
                                 <input type="email" id="email" name="email">
+                                </div>
                             </td>
                             <td>
+                                <div class = "input-cell">
                                 <label for="phone">PHONE NUMBER</label>
                                 <input type="number" id="phone" name="phone">
+                                </div>
                             </td>
                         </tr>
                         <tr>
                             <td>
+                                <div class = "input-cell">
                                 <label for="password">PASSWORD</label>
                                 <input type="password" id="password" name="password">
+                                </div>
                             </td>
                             <td>
+                                <div class = "input-cell">
                                 <label for="confirm_password">CONFIRM PASSWORD</label>
                                 <input type="password" id="confirm_password" name="confirm_password">
+                                </div>
                             </td>
                         </tr>
                     </table>
+                </div>
+                <div class="action">
+                    <button type="submit">Create account</button>
+                    <p>
+                        Already have an account? <a href="login/odin.com">Log in</a>
+                    </p>
                 </div>
             </div>
         </div>
