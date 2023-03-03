@@ -51,7 +51,7 @@ header{
 table{
     border-spacing: 25px;
 }
-input, label {
+label {
     display:block;
 }
 button{
@@ -63,6 +63,22 @@ button{
     font-weight: 800;
     background-color: rgb(99, 124, 99);
     border-radius: 8px
+}
+input:focus{
+    outline: none;
+    border-color: blue;
+
+}
+input:invalid {
+  border-color: red;
+}
+input{
+    display:block;
+    border-style: solid;
+    border-color: black;
+}
+.login_url{
+    color:rgb(99, 124, 99);
 }
 </style>
 
@@ -88,13 +104,13 @@ button{
                         <tr>
                             <td>
                                 <div class = "input-cell">
-                                    <label for="name">FIRST NAME</label>
+                                    <label for="first_name">FIRST NAME</label>
                                     <input type="text" id="first_name" name="first_name" value="Thor">
                                 </div>
                             </td>
                             <td>
                                 <div class = "input-cell">
-                                <label for="name">LAST NAME</label>
+                                <label for="last_name">LAST NAME</label>
                                 <input type="text" id="last_name" name="last_name" value="Odinson">
                                 </div>
                             </td>
@@ -132,10 +148,25 @@ button{
                 <div class="action">
                     <button type="submit">Create account</button>
                     <p>
-                        Already have an account? <a href="login/odin.com">Log in</a>
+                        Already have an account? <a href="login/odin.com" class = "login_url">Log in</a>
                     </p>
                 </div>
             </div>
         </div>
     </body>
 </html>
+
+<script>
+    
+    const confirm_password = document.getElementById("confirm_password")
+
+    confirm_password.addEventListener("input", (event) => {
+        const password_value = document.getElementById("password").value
+        const confirm_passport_value = confirm_password.value
+        if(password_value == confirm_passport_value){
+            confirm_password.style.borderColor = "green"
+        } else {
+            confirm_password.style.borderColor = "red"
+        }
+    })
+</script>
